@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
 When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
@@ -43,3 +44,43 @@ Use these steps to clone from SourceTree, our client for using the repository co
 4. Open the directory you just created to see your repository’s files.
 
 Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+=======
+# Google-Pay for Android
+Google Pay integration developed in Kotlin at Google San Francisco Launchathon on 06/04/2018
+
+# Firebase Integration
+> Create a Firebase project & Integrate it to handle payments with Stripe using Firebase Cloud Functions
+
+- Donwload or clone this repo.
+- Deploy a Firebase project from your terminal using the google cloud functions found [here] .
+- Enable Firebase e-mail authentication for your Firebase project.
+- Upgrade to Firebase project to Flame or Blaze plan to be able to work with Google Cloud Functions.
+- Add your google-services.json file to your Android project.
+```
+goole-services.json
+```
+- Create a Stripe Account to get your API keys.
+- Add your Stripe publishable key to the Constants.kt file found under /Utilities directory.
+```
+object StripeTokens {
+    /*Test Stripe Account Token*/
+    const val publishableKey = "****ADD YOUR STRIPE TEST PUBLISHABLE KEY***"
+}
+```
+- Run & Test using the Stripe Widget or Google Pay payment integrations!
+
+# Android App
+- Firebase Auth for Log in, Sign Up, Sign Out & Forotten password.
+- Firebase Realtime Database used to handle last payment added and payment information.
+- Firebase Cloud Functions used to handle Stripe authentication, token retrieval and payment transactions.
+
+# References
+- [Firebase Cloud Functions] https://firebase.google.com/docs/functions/
+- [Process Payments with Firebase] https://firebase.google.com/docs/use-cases/payments
+- [FireStripe Example] https://github.com/firebase/functions-samples/tree/master/stripe
+- [Stripe Android SDK] https://stripe.com/docs/mobile/android
+
+# Contact
+> Let me know if I can help by contacting me through my [website] https://paixols.com/
+
+>>>>>>> 4f633e7f075b90e350f43a93c09b29a807c923f2
