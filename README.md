@@ -7,7 +7,7 @@ Google Pay integration developed in Kotlin at Google San Francisco Launchathon o
 - Donwload or clone this repo.
 - Deploy a Firebase project from your terminal using the google cloud functions found [here](https://github.com/paixols/Google-Pay/tree/master/googlePayCloud).
 - Enable Firebase e-mail authentication for your Firebase project.
-- Upgrade to Firebase project to Flame or Blaze plan to be able to work with Google Cloud Functions.
+- Upgrade your Firebase project to Flame or Blaze plan to be able to work with Google Cloud Functions.
 - Add your google-services.json file to your Android project.
 ```
 goole-services.json
@@ -28,9 +28,10 @@ object StripeTokens {
 - Firebase Cloud Functions used to handle Stripe authentication, token retrieval and payment transactions.
 
 # References
+- [Deploy Firebase project from terminal](https://firebase.google.com/docs/hosting/deploying)
 - [Firebase Cloud Functions](https://firebase.google.com/docs/functions/)
 - [Process Payments with Firebase](https://firebase.google.com/docs/use-cases/payments)
-- [FireStripe Example](https://github.com/firebase/functions-samples/tree/master/stripe)
+- [Google FireStripe Example](https://github.com/firebase/functions-samples/tree/master/stripe)
 - [Stripe Android SDK](https://stripe.com/docs/mobile/android)
 
 # Contact
