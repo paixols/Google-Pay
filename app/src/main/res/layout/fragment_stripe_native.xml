@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stripe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Stripe Widget-->
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/fsn_card_input_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:padding="15sp"
+            stripe:cardTextErrorColor="@android:color/holo_red_dark"
+            stripe:cardTint="@android:color/holo_blue_light" />
+
+        <!--Additional Card info-->
+        <RelativeLayout
+            android:id="@+id/fsn_additional_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fsn_card_input_widget">
+
+            <View
+                android:id="@+id/fsn_view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="12sp"
+                android:background="@android:color/holo_blue_light" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/fsn_country_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fsn_view_divider"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                app:contentColor="@color/colorAccent"
+                app:countryPreference="US"
+                app:defaultNameCode="US"
+                app:showFullName="true" />
+
+            <!--Phone Number-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fsn_input_layout_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fsn_country_picker"
+                android:padding="15sp"
+                android:paddingTop="10sp"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/fsn_input_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone" />
+
+
+            </android.support.design.widget.TextInputLayout>
+            <!--Zip Code-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/fsn_input_layout_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fsn_input_layout_phone_number"
+                android:padding="15sp"
+                android:paddingTop="10sp"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/fsn_input_zipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/zip_code"
+                    android:inputType="numberDecimal" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fsn_submit_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/fsn_additional_info_container">
+
+            <Button
+                android:id="@+id/fsn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="15sp"
+                android:background="@android:color/holo_green_dark"
+                android:elevation="4sp"
+                android:shadowColor="@android:color/darker_gray"
+                android:text="@string/submit"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

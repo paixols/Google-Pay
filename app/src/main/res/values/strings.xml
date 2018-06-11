@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">GP</string>
+    <string name="title">Title</string>
+    <string name="toolbar_left_button">toolbar_left_button</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="email">email</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="name">name</string>
+    <string name="password">password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up_with_firebase">Sign up with Firebase!</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="sign_in_with_firebase">Sign in with Firebase!</string>
+    <string name="empty_space">empty space</string>
+    <string name="sign_in">Sign in</string>
+
+    <!--Camera-->
+    <string name="pick_image_intent_text">Profile picture</string>
+    <string name="profile">Profile</string>
+    <string name="type">Type</string>
+    <string name="value">value</string>
+    <string name="toolbar_right_button">toolbar_right_button</string>
+    <string name="sign_out">Sign out</string>
+    <string name="stripe_native">Stripe Native</string>
+    <string name="stripe_gp">Stripe GP</string>
+    <string name="cancel">cancel</string>
+    <string name="phone_number">phone number</string>
+    <string name="zip_code">zip code</string>
+    <string name="submit">Submit</string>
+    <string name="date">Date</string>
+    <string name="dateFormat">dd/MM/yyyy hh:mm:ss.SSS</string>
+    <string name="no_previous_transactions">No previous transactions</string>
+    <string name="welcome_to_google_pay_stripe">Welcome to Google Pay + Stripe</string>
+    <string name="pay_10_usd">Pay $10 USD</string>
+</resources>

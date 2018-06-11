@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Instructions-->
+        <TextView
+            android:id="@+id/flt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="Last transaction"
+            android:textColor="@android:color/holo_blue_light" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/flt_transaction_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flt_title"
+            android:layout_marginTop="15sp"
+            android:background="@android:color/white"
+            android:elevation="8sp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--Instructions-->
+                <LinearLayout
+                    android:id="@+id/flt_type_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/type"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/date"
+                        android:textColor="@android:color/darker_gray" />
+
+                </LinearLayout>
+
+                <!--Transaction info-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/flt_type_container"
+                    android:layout_margin="15sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/flt_transaction_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@android:color/holo_blue_light" />
+
+                    <TextView
+                        android:id="@+id/flt_transaction_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_blue_light" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/flt_no_transactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flt_title"
+            android:layout_margin="15sp"
+            android:gravity="center"
+            android:text="@string/no_previous_transactions"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/flt_pay_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flt_transaction_card_view"
+            android:background="@android:color/holo_green_dark"
+            android:text="@string/pay_10_usd"
+            android:textColor="@android:color/white"
+            android:layout_margin="15sp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

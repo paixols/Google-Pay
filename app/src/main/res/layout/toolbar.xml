@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_light"
+    tools:ignore="MissingPrefix">
+
+    <!--Left action item-->
+    <TextView
+        android:id="@+id/left_action"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/toolbar_left_button"
+        android:gravity="bottom"
+        android:text="@string/cancel"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <!--Toolbar title-->
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/google_pay"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/right_action"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="24dp"
+        android:contentDescription="@string/toolbar_right_button"
+        android:gravity="bottom"
+        android:text="@string/sign_out"
+        android:textColor="@android:color/white" />
+
+
+</android.support.v7.widget.Toolbar>

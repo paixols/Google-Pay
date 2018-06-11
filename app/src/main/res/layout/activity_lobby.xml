@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/al_toolbar"
+            layout="@layout/toolbar" />
+
+        <FrameLayout
+            android:id="@+id/al_profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/al_toolbar">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/al_contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/al_buttons_container"
+            android:layout_below="@+id/al_profile_container">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/al_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/background_blur"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <!--Stripe Native-->
+            <Button
+                android:id="@+id/al_stripe_native"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:elevation="4sp"
+                android:padding="15sp"
+                android:shadowColor="@android:color/darker_gray"
+                android:text="@string/stripe_native"
+                android:textColor="@android:color/white" />
+
+            <!--Google Pay Active-->
+            <Button
+                android:id="@+id/al_stripe_googlepay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_dark"
+                android:elevation="4sp"
+                android:padding="15sp"
+                android:shadowColor="@android:color/darker_gray"
+                android:text="@string/stripe_gp"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

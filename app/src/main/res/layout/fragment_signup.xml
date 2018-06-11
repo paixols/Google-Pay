@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15sp">
+
+            <!--Instructions-->
+            <TextView
+                android:id="@+id/fs_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15sp"
+                android:text="@string/sign_up_with_firebase"
+                android:textColor="@android:color/holo_blue_light" />
+
+            <!--Profile picture-->
+            <ImageView
+                android:id="@+id/fs_profile_picture"
+                android:layout_width="75sp"
+                android:layout_height="75sp"
+                android:layout_below="@+id/fs_instructions"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50sp"
+                android:contentDescription="@string/profile_picture"
+                android:src="@drawable/ic_profile" />
+
+            <!--Name-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fs_profile_picture"
+                android:paddingTop="10sp"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/fs_input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:inputType="text" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <!--Email-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_name"
+                android:paddingTop="10sp"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/fs_input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!--Password-->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_layout_email"
+                android:paddingTop="10sp"
+                android:textColorHint="@android:color/holo_blue_light"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/fs_input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <!--Sign Up-->
+        <LinearLayout
+            android:id="@+id/fs_animation_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/fs_sign_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_light"
+                android:text="@string/sign_up"
+                android:textColor="@android:color/white"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
